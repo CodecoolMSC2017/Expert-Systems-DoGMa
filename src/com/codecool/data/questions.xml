@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Questions>
+    <Rule id="length">
+        <Question>Do you have more than 1 hour or more free-time to watch series?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="LONG"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="SHORT"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="animation">
+        <Question> Do you like animations? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="true"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="laughter">
+        <Question> Do you want to laugh? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue genre="COMEDY" value="true"> </SingleValue>
+                <SingleValue genre="HORROR" value="false"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue genre ="COMEDY" value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="scary">
+        <Question> Do you like spooky things? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue genre="HORROR" value="true"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue genre="HORROR" value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="action">
+        <Question> Do you like action? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue genre="ACTION" value="true"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue genre="ACTION" value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="drama">
+        <Question> Do you want to cry? (Look into the mirror) </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue genre="DRAMA" value="true"> </SingleValue>
+            </Selection>
+            <Selection value="false">
+                <SingleValue genre="DRAMA" value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="scifi">
+        <Question> Do you like Science Fiction? </Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue genre="SCIFI" value="true"> </SingleValue>
+            </Selection>
+            <Selection>
+                <SingleValue genre="SCIFI" value="false"> </SingleValue>
+            </Selection>
+        </Answer>
+    </Rule>
+</Questions>

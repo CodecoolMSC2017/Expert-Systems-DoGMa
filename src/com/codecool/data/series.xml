@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="" ?>
+<Facts>
+    <Fact>
+        <Description value="Game of Thrones" />
+        <Evals>
+            <Eval id="length"> true </Eval>
+            <Eval id="animation"> false </Eval>
+            <Eval id="comedy"> false </Eval>
+            <Eval id="horror"> false </Eval>
+            <Eval id="drama"> true </Eval>
+            <Eval id="action"> true </Eval>
+            <Eval id="scifi"> false </Eval>
+        </Evals>
+    </Fact>
+    <Fact>
+        <Description value="Name" />
+        <Evals>
+            <Eval id="length"> true </Eval>
+            <Eval id="animation"> true </Eval>
+            <Eval id="comedy"> true </Eval>
+            <Eval id="horror"> true </Eval>
+            <Eval id="drama"> true </Eval>
+            <Eval id="action"> true </Eval>
+            <Eval id="scifi"> true </Eval>
+        </Evals>
+    </Fact>
+    <Fact>
+        <Description value="Look into the mirror" />
+        <Evals>
+            <Eval id="length"> false </Eval>
+            <Eval id="animation"> false </Eval>
+            <Eval id="comedy"> false </Eval>
+            <Eval id="horror"> false </Eval>
+            <Eval id="drama"> false </Eval>
+            <Eval id="action"> false </Eval>
+            <Eval id="scifi"> false </Eval>
+        </Evals>
+    </Fact>
+</Facts>

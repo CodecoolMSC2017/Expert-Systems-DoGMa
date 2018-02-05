@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Questions>
+<Rules>
     <Rule id="length">
         <Question>Do you have more than 1 hour or more free-time to watch series?</Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="LONG"> </SingleValue>
+                <SingleValue value="LONG"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="SHORT"> </SingleValue>
+                <SingleValue value="SHORT"/>
             </Selection>
         </Answer>
     </Rule>
@@ -15,33 +15,32 @@
         <Question> Do you like animations? </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue value="true"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="laughter">
+    <Rule id="comedy">
         <Question> Do you want to laugh? </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue genre="COMEDY" value="true"> </SingleValue>
-                <SingleValue genre="HORROR" value="false"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection value="false">
-                <SingleValue genre ="COMEDY" value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="scary">
+    <Rule id="horror">
         <Question> Do you like spooky things? </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue genre="HORROR" value="true"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection value="false">
-                <SingleValue genre="HORROR" value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
@@ -49,10 +48,10 @@
         <Question> Do you like action? </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue genre="ACTION" value="true"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection value="false">
-                <SingleValue genre="ACTION" value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
@@ -60,10 +59,10 @@
         <Question> Do you want to cry? (Look into the mirror) </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue genre="DRAMA" value="true"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection value="false">
-                <SingleValue genre="DRAMA" value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
@@ -71,11 +70,11 @@
         <Question> Do you like Science Fiction? </Question>
         <Answer>
             <Selection value="true">
-                <SingleValue genre="SCIFI" value="true"> </SingleValue>
+                <SingleValue value="true"/>
             </Selection>
             <Selection>
-                <SingleValue genre="SCIFI" value="false"> </SingleValue>
+                <SingleValue value="false"/>
             </Selection>
         </Answer>
     </Rule>
-</Questions>
+</Rules>

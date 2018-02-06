@@ -1,7 +1,6 @@
 package codecool;
 
 public abstract class XMLParser {
-    public void loadXmlDocument(String xmlPath){
 
-    }
+    public abstract void loadXmlDocument(String xmlPath);
 }

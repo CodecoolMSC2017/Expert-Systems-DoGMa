@@ -43,7 +43,7 @@ public class FactParser extends XMLParser {
                             evals.item(e).getTextContent().equals("true")
                             );
                 }
-                
+
                 facts.add(new Fact(
                         ((Element) fact).getAttribute("id"),
                         factsChildren.item(0).getNodeValue(),

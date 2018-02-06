@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Facts>
-    <Fact>
+    <Fact id="got">
         <Description value="Game of Thrones" />
         <Evals>
             <Eval id="length"> true </Eval>
@@ -12,7 +12,7 @@
             <Eval id="scifi"> false </Eval>
         </Evals>
     </Fact>
-    <Fact>
+    <Fact id="nm">
         <Description value="Name" />
         <Evals>
             <Eval id="length"> true </Eval>
@@ -24,7 +24,7 @@
             <Eval id="scifi"> true </Eval>
         </Evals>
     </Fact>
-    <Fact>
+    <Fact id="litm">
         <Description value="Look into the mirror" />
         <Evals>
             <Eval id="length"> false </Eval>

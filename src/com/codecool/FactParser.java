@@ -1,6 +1,7 @@
 package codecool;
 
 // XML Structure
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
@@ -13,7 +14,7 @@ import java.util.LinkedList;
 public class FactParser extends XMLParser {
 
     @Override
-    public LinkedList<Fact> loadXmlDocument (String xmlPath) {
+    public LinkedList<Fact> loadXmlDocument(String xmlPath) {
 
         LinkedList<Fact> facts = new LinkedList<Fact>();
 
@@ -55,7 +56,7 @@ public class FactParser extends XMLParser {
         return facts;
     }
 
-    public void printFacts (LinkedList<Fact> facts) {
+    public void printFacts(LinkedList<Fact> facts) {
         System.out.println(facts.size());
         for (Fact fact : facts) {
             System.out.println(fact.getId());
@@ -64,7 +65,7 @@ public class FactParser extends XMLParser {
         }
     }
 
-    public FactRepository getFactRepository(){
+    public FactRepository getFactRepository() {
         return null;
     }
 }

@@ -4,7 +4,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println();
 
+
         FactParser fp = new FactParser();
-        fp.printFacts(fp.loadXmlDocument("src/com/codecool/data/series.xml"));
+        RuleParser rp = new RuleParser();
+
+        ESProvider esp = new ESProvider(fp, rp);
+        esp.factParser.printFacts(esp.factParser.loadXmlDocument("src/com/codecool/data/series.xml"));
     }
 }

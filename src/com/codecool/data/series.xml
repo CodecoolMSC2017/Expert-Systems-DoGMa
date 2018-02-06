@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Facts>
     <Fact id="got">
-        <Description value="Game of Thrones" />
+        <Description value="Game of Thrones"> </Description>
         <Evals>
-            <Eval id="length"> true </Eval>
-            <Eval id="animation"> false </Eval>
-            <Eval id="comedy"> false </Eval>
-            <Eval id="horror"> false </Eval>
-            <Eval id="drama"> true </Eval>
-            <Eval id="action"> true </Eval>
-            <Eval id="scifi"> false </Eval>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
         </Evals>
     </Fact>
     <Fact id="nm">
-        <Description value="Name" />
+        <Description value="Name" > </Description>
         <Evals>
-            <Eval id="length"> true </Eval>
-            <Eval id="animation"> true </Eval>
-            <Eval id="comedy"> true </Eval>
-            <Eval id="horror"> true </Eval>
-            <Eval id="drama"> true </Eval>
-            <Eval id="action"> true </Eval>
-            <Eval id="scifi"> true </Eval>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="true" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="true" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="true" />
         </Evals>
     </Fact>
     <Fact id="litm">
-        <Description value="Look into the mirror" />
+        <Description value="Look into the mirror" > </Description>
         <Evals>
-            <Eval id="length"> false </Eval>
-            <Eval id="animation"> false </Eval>
-            <Eval id="comedy"> false </Eval>
-            <Eval id="horror"> false </Eval>
-            <Eval id="drama"> false </Eval>
-            <Eval id="action"> false </Eval>
-            <Eval id="scifi"> false </Eval>
+            <Eval id="length" value="false" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="false" />
+            <Eval id="scifi" value="false" />
         </Evals>
     </Fact>
 </Facts>

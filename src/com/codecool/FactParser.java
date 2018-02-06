@@ -20,6 +20,7 @@ public class FactParser extends XMLParser {
 
     @Override
     public LinkedList<Fact> loadXmlDocument (String xmlPath) {
+
         LinkedList<Fact> facts = new LinkedList<Fact>();
 
         try {
@@ -29,26 +30,30 @@ public class FactParser extends XMLParser {
 
             NodeList nodeList = document.getElementsByTagName("Fact");
 
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                // Holds the Description and the Evals
-                Node fact = nodeList.item(i);
-                NodeList factsChildren = fact.getChildNodes();
+            for (int f = 0; f < nodeList.getLength(); f++) {
+                // Root node
+                Node fact = nodeList.item(f);
+                Element factE = (Element) fact;
+
+                // Get id for fact
+                String id = factE.getAttribute("id");
+
+                // Get Description for fact
+                String description = ((Element) factE.getElementsByTagName("Description").item(0)).getAttribute("value");
+
+                // Get genres for fact
+                NodeList evals = ((Element) factE.getElementsByTagName("Evals").item(0)).getElementsByTagName("Eval");
 
                 HashMap<String, Boolean> genres = new HashMap<String, Boolean>();
-                // Evals
-                NodeList evals = factsChildren.item(1).getChildNodes();
                 for (int e = 0; e < evals.getLength(); e++) {
                     genres.put(
-                            ((Element)evals.item(e)).getAttribute("id"),
-                            evals.item(e).getTextContent().equals("true")
-                            );
+                            ((Element) evals.item(e)).getAttribute("id"),
+                            ((Element) evals.item(e)).getAttribute("value").equals("true")
+                    );
                 }
 
-                facts.add(new Fact(
-                        ((Element) fact).getAttribute("id"),
-                        factsChildren.item(0).getNodeValue(),
-                        genres
-                ));
+                // Add the fact to facts
+                facts.add(new Fact(id, description, genres));
             }
         } catch (Exception e) {
             e.printStackTrace();

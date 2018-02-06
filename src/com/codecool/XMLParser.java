@@ -1,6 +1,8 @@
 package codecool;
 
+import java.util.LinkedList;
+
 public abstract class XMLParser {
 
-    public abstract void loadXmlDocument(String xmlPath);
+    public abstract LinkedList<Fact> loadXmlDocument(String xmlPath);
 }

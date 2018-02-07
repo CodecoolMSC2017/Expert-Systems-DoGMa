@@ -19,8 +19,7 @@ public class Answer {
     }
 
     public boolean evaluateAnswerByInput(String input) throws Exception {
-        input = input.toLowerCase();
-        if (input.equals("yes")) {
+        if (input.equalsIgnoreCase("yes")) {
             return true;
         } else if (input.equals("no")) {
             return false;

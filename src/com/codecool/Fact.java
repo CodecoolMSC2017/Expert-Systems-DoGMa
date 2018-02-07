@@ -9,7 +9,7 @@ public class Fact {
     String id;
     String description;
 
-    Map<String, Boolean> genres;
+    HashMap<String, Boolean> genres;
 
     public Fact(String id, String description, HashMap<String, Boolean> genres) {
         this.id = id;
@@ -17,45 +17,46 @@ public class Fact {
         this.genres = genres;
     }
 
-    public Set<String> getIdSet(){
+    public Set<String> getIdSet() {
         Set<String> idSet = new HashSet<String>();
 
-        for (String id : genres.keySet()){
+        for (String id : genres.keySet()) {
             idSet.add(id);
         }
 
         return idSet;
     }
-    public void setFactValueByID(String id,boolean value){
+
+    public HashMap<String, Boolean> getGenres () {
+        return genres;
+    }
+
+    public void setFactValueByID(String id, boolean value) {
 
         for (String key : genres.keySet()) {
-            if (key.equals(id)){
+            if (key.equals(id)) {
                 genres.put(key, value);
             }
         }
     }
 
-    public boolean getValueById(String id){
+    public boolean getValueById(String id) {
 
         boolean valueById = true;
 
-        for (Map.Entry<String, Boolean> entry : genres.entrySet()){
-            if (entry.getKey().equals(id)){
+        for (Map.Entry<String, Boolean> entry : genres.entrySet()) {
+            if (entry.getKey().equals(id)) {
                 valueById = entry.getValue();
             }
         }
         return valueById;
     }
-    public String getId () {
+
+    public String getId() {
         return id;
     }
-    public String getDescription(){
-        return description;
-    }
 
-    public void printGenres () {
-        for (Map.Entry<String, Boolean> genre : genres.entrySet()) {
-            System.out.println(genre.getKey() + (genre.getValue() ? "true" : "false"));
-        }
+    public String getDescription() {
+        return description;
     }
 }

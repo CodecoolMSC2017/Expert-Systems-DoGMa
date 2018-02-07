@@ -1,5 +1,6 @@
 package codecool;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Answer {
@@ -10,8 +11,8 @@ public class Answer {
         values.add(value);
     }
 
-    public Answer(List<Value> values) {
-        this.values = values;
+    public Answer() {
+        values = new LinkedList<Value>();
     }
 
     public List<Value> getValues() {

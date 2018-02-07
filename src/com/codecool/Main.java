@@ -8,6 +8,6 @@ public class Main {
 
         ESProvider esp = new ESProvider(fp, rp);
 
-        rp.readElementsFromXml("src/com/codecool/data/questions.xml");
+        esp.collectAnswers();
     }
 }

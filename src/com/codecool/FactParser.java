@@ -10,13 +10,11 @@ public class FactParser extends XMLParser {
 
     private FactRepository factRepository;
 
-    private LinkedList<Fact> facts;
-
 
     // Constructor(s)
     public FactParser() {
         loadXmlDocument("src/com/codecool/data/series.xml");
-        factRepository = new FactRepository(facts);
+        factRepository = new FactRepository();
     }
 
 
@@ -29,7 +27,6 @@ public class FactParser extends XMLParser {
     // XMLParser method(s)
     @Override
     public void readElementsFromXml(String xmlPath) {
-        facts = new LinkedList<Fact>();
         loadXmlDocument(xmlPath);
 
         try {
@@ -58,21 +55,12 @@ public class FactParser extends XMLParser {
                 }
 
                 // Add the fact to facts
-                facts.add(new Fact(id, description, genres));
+                factRepository.addFact(
+                        new Fact(id, description, genres)
+                );
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        printFacts(facts);
-    }
-
-
-    // FactParser method(s)
-    public void printFacts(List<Fact> facts) {
-        for (Fact fact : facts) {
-            System.out.println(fact.getId());
-            System.out.println(fact.getDescription());
-            fact.printGenres();
         }
     }
 }

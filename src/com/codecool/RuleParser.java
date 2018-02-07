@@ -9,15 +9,24 @@ import java.util.List;
 
 public class RuleParser extends XMLParser {
 
-    LinkedList<Question> questions;
+    private RuleRepository ruleRepository;
 
-    public RuleRepository getRuleRepository(){
-        return null;
+
+    // Constructor(s)
+    public RuleParser() {
+        ruleRepository = new RuleRepository();
     }
 
+
+    // Getter(s)
+    public RuleRepository getRuleRepository() {
+        return ruleRepository;
+    }
+
+
+    // XMLParser method(s)
     @Override
-    public void readElementsFromXml(String xmlPath){
-        questions = new LinkedList<Question>();
+    public void readElementsFromXml(String xmlPath) {
         loadXmlDocument(xmlPath);
 
         System.out.printf("Itt vagyok");
@@ -59,8 +68,7 @@ public class RuleParser extends XMLParser {
                     answer.addValue(value);
                 }
 
-                System.out.printf("%s  %s ", questionId, questionText);
-                questions.add(
+                ruleRepository.addQuestion(
                         new Question(questionId, questionText, answer)
                 );
             }

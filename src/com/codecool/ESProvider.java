@@ -5,20 +5,26 @@ public class ESProvider {
     FactParser factParser;
     RuleParser ruleParser;
 
-    public ESProvider(FactParser factParser,RuleParser ruleParser){
+
+    // Constructor(s)
+    public ESProvider(FactParser factParser, RuleParser ruleParser) {
         this.factParser = factParser;
         this.ruleParser = ruleParser;
     }
 
-    public void collectAnswers(){
 
-    }
-
-    public boolean getAnswerByQuestion(String questionId){
+    // Getter(s)
+    public boolean getAnswerByQuestion(String questionId) {
         return true;
     }
 
-    public String evaluate(){
+
+    // ESProvider method(s)
+    public void collectAnswers() {
+
+    }
+
+    public String evaluate() {
         return "";
     }
 }

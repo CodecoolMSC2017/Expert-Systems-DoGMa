@@ -4,14 +4,32 @@ import org.w3c.dom.*;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 public class FactParser extends XMLParser {
 
-    LinkedList<Fact> facts = new LinkedList<Fact>();
+    private FactRepository factRepository;
 
+    private LinkedList<Fact> facts;
+
+
+    // Constructor(s)
+    public FactParser() {
+        loadXmlDocument("src/com/codecool/data/series.xml");
+        factRepository = new FactRepository(facts);
+    }
+
+
+    // Getter(s)
+    public FactRepository getFactRepository() {
+        return factRepository;
+    }
+
+
+    // XMLParser method(s)
     @Override
     public void readElementsFromXml(String xmlPath) {
-
+        facts = new LinkedList<Fact>();
         loadXmlDocument(xmlPath);
 
         try {
@@ -48,15 +66,13 @@ public class FactParser extends XMLParser {
         printFacts(facts);
     }
 
-    public void printFacts(LinkedList<Fact> facts) {
+
+    // FactParser method(s)
+    public void printFacts(List<Fact> facts) {
         for (Fact fact : facts) {
             System.out.println(fact.getId());
             System.out.println(fact.getDescription());
             fact.printGenres();
         }
-    }
-
-    public FactRepository getFactRepository() {
-        return null;
     }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Expert-Systems-DoGMa.iml" filepath="$PROJECT_DIR$/.idea/Expert-Systems-DoGMa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Expert-Systems-DoGMa.iml" filepath="$PROJECT_DIR$/Expert-Systems-DoGMa.iml" />
     </modules>
   </component>
 </project>

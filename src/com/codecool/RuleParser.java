@@ -29,8 +29,6 @@ public class RuleParser extends XMLParser {
     public void readElementsFromXml(String xmlPath) {
         loadXmlDocument(xmlPath);
 
-        System.out.printf("Itt vagyok");
-
         try {
             NodeList nodeList = document.getElementsByTagName("Rule");
 

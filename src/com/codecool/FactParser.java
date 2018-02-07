@@ -13,8 +13,8 @@ public class FactParser extends XMLParser {
 
     // Constructor(s)
     public FactParser() {
-        loadXmlDocument("src/com/codecool/data/series.xml");
         factRepository = new FactRepository();
+        readElementsFromXml("src/com/codecool/data/series.xml");
     }
 
 

@@ -22,27 +22,31 @@ public class RuleParser extends XMLParser {
             NodeList nodeList = document.getElementsByTagName("Rule");
 
             for (int r = 0; r < nodeList.getLength(); r++) {
+                // Root node
                 Node rule = nodeList.item(r);
                 Element ruleE = (Element) rule;
 
+                // Get question from Rule
                 Element questionE = (Element) ruleE.getElementsByTagName("Question").item(0);
+                String questionId = questionE.getAttribute("id");
+                String questionText = questionE.getTextContent();
 
-
+                // Get answer from Rule
                 Element answerE = (Element) ruleE.getElementsByTagName("Answer").item(0);
                 // Read the selection values...
 
-                answerE.getElementsByTagName("Selection");
+                NodeList selections = answerE.getElementsByTagName("Selection");
+
+                for (int s = 0; s < selections.getLength(); s++) {
+                    System.out.println(s);
+                }
 
                 Question question = new Question(
-                        questionE.getAttribute("id"),
-                        questionE.getTextContent(),
+                        questionId,
+                        questionText,
                         new Answer()
                 );
             }
-            // Code here
-
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }

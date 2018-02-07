@@ -3,77 +3,77 @@
     <Rule id="length">
         <Question>Do you have more than 1 hour or more free-time to watch series?</Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="animation">
         <Question> Do you like animations? </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="comedy">
         <Question> Do you want to laugh? </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="horror">
         <Question> Do you like spooky things? </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="action">
         <Question> Do you like action? </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="drama">
         <Question> Do you want to cry? (Look into the mirror) </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>
     <Rule id="scifi">
         <Question> Do you like Science Fiction? </Question>
         <Answer>
-            <Selection value="yes">
-                <SingleValue value="true"/>
+            <Selection value="true">
+                <SingleValue value="yes"/>
             </Selection>
-            <Selection value="no">
-                <SingleValue value="false"/>
+            <Selection value="false">
+                <SingleValue value="no"/>
             </Selection>
         </Answer>
     </Rule>

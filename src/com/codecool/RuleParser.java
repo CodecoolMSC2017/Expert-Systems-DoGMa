@@ -5,6 +5,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class RuleParser extends XMLParser {
 
@@ -16,7 +17,10 @@ public class RuleParser extends XMLParser {
 
     @Override
     public void readElementsFromXml(String xmlPath){
+        questions = new LinkedList<Question>();
         loadXmlDocument(xmlPath);
+
+        System.out.printf("Itt vagyok");
 
         try {
             NodeList nodeList = document.getElementsByTagName("Rule");
@@ -25,26 +29,39 @@ public class RuleParser extends XMLParser {
                 // Root node
                 Node rule = nodeList.item(r);
                 Element ruleE = (Element) rule;
+                String questionId = ruleE.getAttribute("id");
 
                 // Get question from Rule
                 Element questionE = (Element) ruleE.getElementsByTagName("Question").item(0);
-                String questionId = questionE.getAttribute("id");
                 String questionText = questionE.getTextContent();
 
                 // Get answer from Rule
                 Element answerE = (Element) ruleE.getElementsByTagName("Answer").item(0);
-                // Read the selection values...
+                Answer answer = new Answer();
 
                 NodeList selections = answerE.getElementsByTagName("Selection");
 
                 for (int s = 0; s < selections.getLength(); s++) {
-                    System.out.println(s);
+                    // Root Element
+                    Element selection = (Element) selections.item(s);
+
+                    // Get selectionType
+                    boolean selectionType = selection.getAttribute("value").equals("true");
+
+                    // Get inputPattern
+                    // TODO: Should check if there's a Single or Multiple -Value...
+                    Element valueE = (Element) selection.getElementsByTagName("SingleValue").item(0);
+                    String inputPattern = valueE.getAttribute("value");
+
+                    // Build value
+                    Value value = new SingleValue(inputPattern, selectionType);
+
+                    answer.addValue(value);
                 }
 
-                Question question = new Question(
-                        questionId,
-                        questionText,
-                        new Answer()
+                System.out.printf("%s  %s ", questionId, questionText);
+                questions.add(
+                        new Question(questionId, questionText, answer)
                 );
             }
         } catch (Exception e) {

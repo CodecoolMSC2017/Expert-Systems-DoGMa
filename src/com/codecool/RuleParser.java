@@ -12,6 +12,7 @@ public class RuleParser extends XMLParser {
     // Constructor(s)
     public RuleParser() {
         ruleRepository = new RuleRepository();
+        readElementsFromXml("src/com/codecool/data/questions.xml");
     }
 
 

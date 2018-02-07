@@ -9,6 +9,6 @@ public class Main {
         RuleParser rp = new RuleParser();
 
         ESProvider esp = new ESProvider(fp, rp);
-        esp.factParser.printFacts(esp.factParser.loadXmlDocument("src/com/codecool/data/series.xml"));
+        esp.factParser.loadXmlDocument("src/com/codecool/data/series.xml");
     }
 }

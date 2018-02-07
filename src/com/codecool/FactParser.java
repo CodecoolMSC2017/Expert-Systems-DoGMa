@@ -1,28 +1,20 @@
 package codecool;
 
-// XML Structure
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-
 import org.w3c.dom.*;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 public class FactParser extends XMLParser {
 
-    @Override
-    public LinkedList<Fact> loadXmlDocument(String xmlPath) {
+    LinkedList<Fact> facts = new LinkedList<Fact>();
 
-        LinkedList<Fact> facts = new LinkedList<Fact>();
+    @Override
+    public void readElementsFromXml(String xmlPath) {
+
+        loadXmlDocument(xmlPath);
 
         try {
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document document = dBuilder.parse(new File(xmlPath));
-
             NodeList nodeList = document.getElementsByTagName("Fact");
 
             for (int f = 0; f < nodeList.getLength(); f++) {
@@ -30,13 +22,13 @@ public class FactParser extends XMLParser {
                 Node fact = nodeList.item(f);
                 Element factE = (Element) fact;
 
-                // Get id for fact
+                // Get id from fact
                 String id = factE.getAttribute("id");
 
-                // Get Description for fact
+                // Get Description from fact
                 String description = ((Element) factE.getElementsByTagName("Description").item(0)).getAttribute("value");
 
-                // Get genres for fact
+                // Get genres from Evals
                 NodeList evals = ((Element) factE.getElementsByTagName("Evals").item(0)).getElementsByTagName("Eval");
 
                 HashMap<String, Boolean> genres = new HashMap<String, Boolean>();
@@ -53,11 +45,10 @@ public class FactParser extends XMLParser {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return facts;
+        printFacts(facts);
     }
 
     public void printFacts(LinkedList<Fact> facts) {
-        System.out.println(facts.size());
         for (Fact fact : facts) {
             System.out.println(fact.getId());
             System.out.println(fact.getDescription());

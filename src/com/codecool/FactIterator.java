@@ -2,16 +2,21 @@ package codecool;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class FactIterator implements Iterator<Fact> {
 
-    private LinkedList<Fact> facts;
+    private List<Fact> facts;
     private int index = 0;
 
-    public FactIterator(LinkedList<Fact> facts) {
-        this.facts = facts;
+
+    // Constructor(s)
+    public FactIterator(List<Fact> facts) {
+        this.facts = new LinkedList<Fact>(facts);
     }
 
+
+    // Iterator method(s)
     public boolean hasNext() {
         return index < facts.size();
     }

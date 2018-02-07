@@ -6,11 +6,13 @@ import java.util.List;
 
 public class FactRepository {
 
+    private List<Fact> facts;
     private FactIterator factIterator;
 
 
     // Constructor(s)
-    public FactRepository(LinkedList<Fact> facts) {
+    public FactRepository() {
+        facts = new LinkedList<Fact>();
         factIterator = new FactIterator(facts);
     }
 
@@ -23,6 +25,6 @@ public class FactRepository {
 
     // FactRepository method(s)
     public void addFact(Fact fact) {
-
+        facts.add(fact);
     }
 }

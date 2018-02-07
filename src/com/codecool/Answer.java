@@ -18,12 +18,13 @@ public class Answer {
         return values;
     }
 
-    public boolean evaluateAnswerByInput(String input) {
-        for (Value value: values) {
-            if (value.getInputPattern().contains(input)) {
-                return true;
-            }
+    public boolean evaluateAnswerByInput(String input) throws Exception {
+        input = input.toLowerCase();
+        if (input.equals("yes")) {
+            return true;
+        } else if (input.equals("no")) {
+            return false;
         }
-        return false;
+        throw new Exception("Wrong input");
     }
 }

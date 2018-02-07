@@ -47,4 +47,13 @@ public class Question {
 
         return answer.evaluateAnswerByInput(input);
     }
+
+    public void askUser () {
+        System.out.println(question);
+        for (Value value : answer.getValues()) {
+            for (String pattern : value.getInputPattern()) {
+                System.out.printf("%s,  ", pattern);
+            }
+        }
+    }
 }

@@ -1,12 +1,30 @@
 package codecool;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class RuleRepository {
-    public void addQuestion(Question question){
 
+    private List<Question> questions;
+    private QuestionIterator questionIterator;
+
+
+    // Constructor(s)
+    public RuleRepository() {
+        questions = new LinkedList<Question>();
+        questionIterator = new QuestionIterator(questions);
     }
-    public Iterator<Question> getIterator(){
-        return null;
+
+
+    // Getter(s)
+    public Iterator<Question> getIterator() {
+        return questionIterator;
+    }
+
+
+    // RuleRepository method(s)
+    public void addQuestion(Question question) {
+        questions.add(question);
     }
 }

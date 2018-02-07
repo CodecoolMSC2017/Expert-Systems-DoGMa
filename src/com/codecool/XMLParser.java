@@ -19,5 +19,5 @@ public abstract class XMLParser {
         } catch (Exception e) {}
     }
 
-    protected void readElementsFromXml (String xmlPath) {}
+    protected abstract void readElementsFromXml (String xmlPath);
 }

@@ -7,5 +7,7 @@ public class Main {
         RuleParser rp = new RuleParser();
 
         ESProvider esp = new ESProvider(fp, rp);
+
+        rp.readElementsFromXml("src/com/codecool/data/questions.xml");
     }
 }

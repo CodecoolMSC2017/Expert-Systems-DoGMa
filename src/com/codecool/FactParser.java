@@ -22,13 +22,13 @@ public class FactParser extends XMLParser {
                 Node fact = nodeList.item(f);
                 Element factE = (Element) fact;
 
-                // Get id for fact
+                // Get id from fact
                 String id = factE.getAttribute("id");
 
-                // Get Description for fact
+                // Get Description from fact
                 String description = ((Element) factE.getElementsByTagName("Description").item(0)).getAttribute("value");
 
-                // Get genres for fact
+                // Get genres from Evals
                 NodeList evals = ((Element) factE.getElementsByTagName("Evals").item(0)).getElementsByTagName("Eval");
 
                 HashMap<String, Boolean> genres = new HashMap<String, Boolean>();

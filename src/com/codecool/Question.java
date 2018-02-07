@@ -1,12 +1,12 @@
 package codecool;
 
-import javax.print.attribute.standard.RequestingUserName;
-
 public class Question {
     private String id;
     private String question;
     private Answer answer;
 
+
+    // Constructor(s)
     public Question(String id, String question, Answer answer) {
         this.id = id;
         this.question = question;
@@ -14,31 +14,36 @@ public class Question {
     }
 
 
+    // Getter(s)
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getQuestion() {
         return question;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
     public Answer getAnswer() {
         return answer;
+    }
+
+
+    // Setter(s)
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public void setAnswer(Answer answer) {
         this.answer = answer;
     }
 
-    public boolean getEvaluatedAsnwer(String input) throws Exception{
+
+    // Question method(s)
+    public boolean getEvaluatedAsnwer(String input) throws Exception {
 
         return answer.evaluateAnswerByInput(input);
     }

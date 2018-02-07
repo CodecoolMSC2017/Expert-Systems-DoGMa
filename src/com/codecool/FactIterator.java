@@ -12,7 +12,7 @@ public class FactIterator implements Iterator<Fact> {
 
     // Constructor(s)
     public FactIterator(List<Fact> facts) {
-        this.facts = new LinkedList<Fact>(facts);
+        //this.facts = new LinkedList<Fact>(facts);
     }
 
 

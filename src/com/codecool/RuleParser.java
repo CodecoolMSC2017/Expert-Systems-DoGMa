@@ -11,8 +11,9 @@ public class RuleParser extends XMLParser {
 
     // Constructor(s)
     public RuleParser(String xmlPath) {
+        this.xmlPath = xmlPath;
         ruleRepository = new RuleRepository();
-        readElementsFromXml(xmlPath);
+        readElementsFromXml();
     }
 
 
@@ -24,8 +25,8 @@ public class RuleParser extends XMLParser {
 
     // XMLParser method(s)
     @Override
-    public void readElementsFromXml(String xmlPath) {
-        loadXmlDocument(xmlPath);
+    public void readElementsFromXml() {
+        loadXmlDocument();
 
         try {
             NodeList nodeList = document.getElementsByTagName("Rule");

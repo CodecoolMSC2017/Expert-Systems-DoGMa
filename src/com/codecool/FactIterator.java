@@ -3,6 +3,7 @@ package codecool;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class FactIterator implements Iterator<Fact> {
 
@@ -22,6 +23,9 @@ public class FactIterator implements Iterator<Fact> {
     }
 
     public Fact next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
         return facts.get(index++);
     }
 

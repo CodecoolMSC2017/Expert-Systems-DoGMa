@@ -12,9 +12,9 @@ public class FactParser extends XMLParser {
 
 
     // Constructor(s)
-    public FactParser() {
+    public FactParser(String xmlPath) {
         factRepository = new FactRepository();
-        readElementsFromXml("src/com/codecool/data/series.xml");
+        readElementsFromXml(xmlPath);
     }
 
 

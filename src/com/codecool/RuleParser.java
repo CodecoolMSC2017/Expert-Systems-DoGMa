@@ -10,9 +10,9 @@ public class RuleParser extends XMLParser {
 
 
     // Constructor(s)
-    public RuleParser() {
+    public RuleParser(String xmlPath) {
         ruleRepository = new RuleRepository();
-        readElementsFromXml("src/com/codecool/data/questions.xml");
+        readElementsFromXml(xmlPath);
     }
 
 

@@ -3,8 +3,8 @@ package codecool;
 public class Main {
     public static void main(String[] args) {
 
-        FactParser fp = new FactParser();
-        RuleParser rp = new RuleParser();
+        FactParser fp = new FactParser("src/com/codecool/data/series.xml");
+        RuleParser rp = new RuleParser("src/com/codecool/data/questions.xml");
 
         ESProvider esp = new ESProvider(fp, rp);
 

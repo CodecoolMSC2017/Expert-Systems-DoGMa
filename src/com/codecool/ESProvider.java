@@ -33,7 +33,7 @@ public class ESProvider {
 
         while (questions.hasNext()) {
             Question question = questions.next();
-            while(true) {
+            while (true) {
                 try {
                     Scanner input = new Scanner(System.in);
                     question.askUser();
@@ -59,12 +59,14 @@ public class ESProvider {
             try {
                 for (Map.Entry<String, Boolean> genre : fact.getGenres().entrySet()) {
 
+
                     if (genre.getValue() != getAnswerByQuestion(genre.getKey())) {
                         throw new Exception("The user won't like this.");
                     }
                 }
                 chosenSeries += fact.getDescription() + "\n";
-            } catch (Exception e) {}
+            } catch (Exception e) {
+            }
         }
         return chosenSeries;
     }

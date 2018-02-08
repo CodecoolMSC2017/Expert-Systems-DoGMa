@@ -77,6 +77,6 @@ public class ESProvider {
             } catch (Exception e) {
             }
         }
-        return chosenSeries;
+        return chosenSeries.equals("") ? "Series not found!" : chosenSeries;
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Facts>
+    <Fact id="got">
+        <Description value="Test"> </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="true" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="true" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="true" />
+        </Evals>
+    </Fact>
+</Facts>

@@ -25,7 +25,9 @@ public class ESProvider {
     public boolean getAnswerByQuestion(String questionId) {
         return preferences.get(questionId);
     }
-
+    public void addPreference(String questionId,boolean answer){
+        preferences.put(questionId,answer);
+    }
 
     // ESProvider method(s)
     public void collectAnswers() {
@@ -38,7 +40,7 @@ public class ESProvider {
                     Scanner input = new Scanner(System.in);
                     question.askUser();
                     boolean evaluatedAsnwer = question.getEvaluatedAnswer(input.nextLine());
-                    preferences.put(question.getId(), evaluatedAsnwer);
+                    addPreference(question.getId(), evaluatedAsnwer);
 
                     break;
                 } catch (Exception e) {
@@ -49,6 +51,8 @@ public class ESProvider {
 
         System.out.println(evaluate());
     }
+
+
 
     public String evaluate() {
         Iterator<Fact> facts = factParser.getFactRepository().getIterator();

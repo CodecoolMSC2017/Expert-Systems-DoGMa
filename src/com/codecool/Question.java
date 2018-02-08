@@ -28,22 +28,8 @@ public class Question {
     }
 
 
-    // Setter(s)
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
-    }
-
-
     // Question method(s)
-    public boolean getEvaluatedAsnwer(String input) throws Exception {
+    public boolean getEvaluatedAnswer(String input) throws Exception {
 
         return answer.evaluateAnswerByInput(input);
     }

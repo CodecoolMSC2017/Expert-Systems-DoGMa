@@ -14,7 +14,6 @@ public class FactRepository {
     public FactRepository() {
         facts = new LinkedList<Fact>();
         factIterator = new FactIterator(facts);
-        printFactCollectionNumber();
     }
 
 
@@ -29,7 +28,7 @@ public class FactRepository {
         facts.add(fact);
     }
 
-    private void printFactCollectionNumber() {
-        System.out.printf("There are a total of %s series in our collection!", facts.size());
+    public void printFactCollectionNumber() {
+        System.out.printf("There are a total of %s series in our collection!\n", facts.size());
     }
 }

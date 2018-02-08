@@ -36,6 +36,7 @@ public class ESProvider {
 
     // ESProvider method(s)
     public void collectAnswers() {
+        factParser.getFactRepository().printFactCollectionNumber();
         Iterator<Question> questions = ruleParser.getRuleRepository().getIterator();
 
         while (questions.hasNext()) {

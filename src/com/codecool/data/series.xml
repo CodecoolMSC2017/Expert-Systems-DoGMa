@@ -12,8 +12,8 @@
             <Eval id="scifi" value="false" />
         </Evals>
     </Fact>
-    <Fact id="nm">
-        <Description value="Name" > </Description>
+    <Fact id="wwyl">
+        <Description value="Watch whatever you like" > </Description>
         <Evals>
             <Eval id="length" value="true" />
             <Eval id="animation" value="true" />
@@ -45,6 +45,126 @@
             <Eval id="horror" value="false" />
             <Eval id="drama" value="false" />
             <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="bp">
+        <Description value="Blood plus" > </Description>
+        <Evals>
+            <Eval id="length" value="false" />
+            <Eval id="animation" value="true" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="true" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="iasp">
+        <Description value="It's always sunny in Philadelphia" > </Description>
+        <Evals>
+            <Eval id="length" value="false" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="false" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="twd">
+        <Description value="The walking dead" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="f">
+        <Description value="Fargo" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="bsg">
+        <Description value="BattleStar Galactica" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="true" />
+        </Evals>
+    </Fact>
+    <Fact id="st">
+        <Description value="Star Trek" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="true" />
+        </Evals>
+    </Fact>
+    <Fact id="ahs">
+        <Description value="American Horror Story" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="true" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="st">
+        <Description value="Star Trek" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="false" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="true" />
+        </Evals>
+    </Fact>
+    <Fact id="tw">
+        <Description value="The Wire" > </Description>
+        <Evals>
+            <Eval id="length" value="true" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="true" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
+    <Fact id="thm">
+        <Description value="Two and a half man" > </Description>
+        <Evals>
+            <Eval id="length" value="false" />
+            <Eval id="animation" value="false" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="false" />
             <Eval id="scifi" value="false" />
         </Evals>
     </Fact>

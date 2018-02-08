@@ -10,8 +10,9 @@ import java.util.LinkedList;
 public abstract class XMLParser {
 
     protected Document document;
+    protected String xmlPath;
 
-    protected void loadXmlDocument(String xmlPath) {
+    protected void loadXmlDocument() {
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -19,5 +20,5 @@ public abstract class XMLParser {
         } catch (Exception e) {}
     }
 
-    protected abstract void readElementsFromXml (String xmlPath);
+    protected abstract void readElementsFromXml ();
 }

@@ -59,4 +59,20 @@ public class Fact {
     public String getDescription() {
         return description;
     }
+
+    public boolean isEqual(Fact fact){
+        if(!id.equals(fact.getId())){
+            return false;
+        }else if (!description.equals(fact.getDescription())) {
+            return false;
+        }
+        for (Map.Entry<String,Boolean> genre :genres.entrySet()){
+            if(genre.getValue()!=fact.getValueById(genre.getKey())){
+                return false;
+            }
+        }
+        return  true;
+    }
+
+
 }

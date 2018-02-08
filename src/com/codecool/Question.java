@@ -34,7 +34,7 @@ public class Question {
         return answer.evaluateAnswerByInput(input);
     }
 
-    public void askUser () {
+    public void askUser() {
         System.out.println(question);
         for (Value value : answer.getValues()) {
             for (String pattern : value.getInputPattern()) {
@@ -42,4 +42,17 @@ public class Question {
             }
         }
     }
+
+    public boolean isEqual(Question q) {
+        if (!question.equals(q.getQuestion())) {
+            return false;
+        } else if (!id.equals(q.getId())) {
+            return false;
+        }
+        if (!answer.isEqual(q.getAnswer())) {
+            return false;
+        }
+        return true;
+    }
+
 }

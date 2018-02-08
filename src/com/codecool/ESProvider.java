@@ -59,14 +59,12 @@ public class ESProvider {
             try {
                 for (Map.Entry<String, Boolean> genre : fact.getGenres().entrySet()) {
 
-                    if (genre.getValue() != preferences.get(genre.getKey())) {
+                    if (genre.getValue() != getAnswerByQuestion(genre.getKey())) {
                         throw new Exception("The user won't like this.");
                     }
                 }
                 chosenSeries += fact.getDescription() + "\n";
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            } catch (Exception e) {}
         }
         return chosenSeries;
     }

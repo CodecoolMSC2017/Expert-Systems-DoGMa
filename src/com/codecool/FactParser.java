@@ -13,8 +13,9 @@ public class FactParser extends XMLParser {
 
     // Constructor(s)
     public FactParser(String xmlPath) {
+        this.xmlPath = xmlPath;
         factRepository = new FactRepository();
-        readElementsFromXml(xmlPath);
+        readElementsFromXml();
     }
 
 
@@ -26,8 +27,8 @@ public class FactParser extends XMLParser {
 
     // XMLParser method(s)
     @Override
-    public void readElementsFromXml(String xmlPath) {
-        loadXmlDocument(xmlPath);
+    public void readElementsFromXml() {
+        loadXmlDocument();
 
         try {
             NodeList nodeList = document.getElementsByTagName("Fact");

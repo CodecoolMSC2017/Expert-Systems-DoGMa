@@ -17,7 +17,6 @@ class AnswerTest {
     }
 
     @Test
-    @org.testng.annotations.Test
     void evaluateAnswerByInputTest() throws Exception {
         assertTrue( a.evaluateAnswerByInput("yes"));
         assertFalse( a.evaluateAnswerByInput("no"));

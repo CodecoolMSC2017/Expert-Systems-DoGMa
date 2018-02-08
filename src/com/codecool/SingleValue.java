@@ -20,4 +20,14 @@ public class SingleValue extends Value {
     public boolean getSelectionType() {
         return selectionType;
     }
+
+    public boolean isEqual(Value value) {
+        for (String pattern : inputPattern) {
+            if (!value.getInputPattern().contains(pattern)) {
+                return false;
+            }
+
+        }
+        return true;
+    }
 }

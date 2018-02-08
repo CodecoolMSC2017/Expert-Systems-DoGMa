@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rules>
+    <Rule id="Test">
+        <Question>Do you?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+</Rules>

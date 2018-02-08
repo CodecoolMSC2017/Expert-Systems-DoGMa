@@ -14,4 +14,14 @@ public abstract class Value {
     public abstract List<String> getInputPattern();
 
     public abstract boolean getSelectionType();
+
+    public boolean isEqual(Value value) {
+        for (String pattern : inputPattern)
+            if (!value.getInputPattern().contains(pattern)) {
+                return false;
+            }
+        return true;
+
+    }
 }
+

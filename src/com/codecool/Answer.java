@@ -20,11 +20,29 @@ public class Answer {
     }
 
     public boolean evaluateAnswerByInput(String input) throws Exception {
-        if (input.equalsIgnoreCase("yes")) {
-            return true;
-        } else if (input.equals("no")) {
-            return false;
+        for (Value value : values) {
+            if (value.getInputPattern().contains(input)) {
+                return value.getSelectionType();
+            }
         }
         throw new Exception("Wrong input");
+    }
+
+
+    public boolean isEqual(Answer a) {
+        for (Value value : values) {
+            if(!checkValues(value,a)){
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean checkValues(Value thisValue, Answer answer){
+        for(Value otherValue : answer.getValues()){
+            if(thisValue.isEqual(otherValue)){
+                return true;
+            }
+        }
+        return false;
     }
 }

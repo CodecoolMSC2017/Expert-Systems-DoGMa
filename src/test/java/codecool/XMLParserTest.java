@@ -8,5 +8,6 @@ class XMLParserTest {
 
     @Test
     void loadXmlDocument() {
+
     }
 }

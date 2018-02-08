@@ -44,8 +44,8 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="action">
-        <Question> Do you like action? </Question>
+    <Rule id="drama">
+        <Question> Do you want to cry? (Look into the mirror) </Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -55,8 +55,8 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="drama">
-        <Question> Do you want to cry? (Look into the mirror) </Question>
+    <Rule id="action">
+        <Question> Do you like action? </Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>

@@ -36,4 +36,16 @@
             <Eval id="scifi" value="false" />
         </Evals>
     </Fact>
+    <Fact id="sp">
+        <Description value="South Park" > </Description>
+        <Evals>
+            <Eval id="length" value="false" />
+            <Eval id="animation" value="true" />
+            <Eval id="comedy" value="true" />
+            <Eval id="horror" value="false" />
+            <Eval id="drama" value="false" />
+            <Eval id="action" value="true" />
+            <Eval id="scifi" value="false" />
+        </Evals>
+    </Fact>
 </Facts>

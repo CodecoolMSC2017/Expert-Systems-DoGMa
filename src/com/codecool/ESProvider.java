@@ -37,7 +37,7 @@ public class ESProvider {
                 try {
                     Scanner input = new Scanner(System.in);
                     question.askUser();
-                    boolean evaluatedAsnwer = question.getEvaluatedAsnwer(input.nextLine());
+                    boolean evaluatedAsnwer = question.getEvaluatedAnswer(input.nextLine());
                     preferences.put(question.getId(), evaluatedAsnwer);
 
                     break;

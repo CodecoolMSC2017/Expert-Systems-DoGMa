@@ -1,5 +1,7 @@
 package codecool;
 
+import codecool.DataService.FactParser;
+import codecool.DataService.RuleParser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

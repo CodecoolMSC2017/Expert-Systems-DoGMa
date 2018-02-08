@@ -1,4 +1,6 @@
-package codecool;
+package codecool.Rule;
+
+import codecool.Rule.question.Question;
 
 import java.util.Iterator;
 import java.util.LinkedList;

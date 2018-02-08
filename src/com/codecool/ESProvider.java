@@ -1,5 +1,10 @@
 package codecool;
 
+import codecool.Fact.Fact;
+import codecool.DataService.FactParser;
+import codecool.Rule.question.Question;
+import codecool.DataService.RuleParser;
+
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Iterator;

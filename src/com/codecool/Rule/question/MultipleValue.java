@@ -1,4 +1,4 @@
-package codecool;
+package codecool.Rule.question;
 
 import java.util.List;
 

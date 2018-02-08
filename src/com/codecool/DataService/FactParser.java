@@ -1,10 +1,10 @@
-package codecool;
+package codecool.DataService;
 
+import codecool.Fact.Fact;
+import codecool.Fact.FactRepository;
 import org.w3c.dom.*;
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 
 public class FactParser extends XMLParser {
 

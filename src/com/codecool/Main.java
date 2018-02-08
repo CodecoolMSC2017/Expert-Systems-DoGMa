@@ -1,5 +1,8 @@
 package codecool;
 
+import codecool.DataService.FactParser;
+import codecool.DataService.RuleParser;
+
 public class Main {
     public static void main(String[] args) {
 

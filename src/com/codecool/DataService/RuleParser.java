@@ -1,5 +1,10 @@
-package codecool;
+package codecool.DataService;
 
+import codecool.Rule.RuleRepository;
+import codecool.Rule.question.Answer;
+import codecool.Rule.question.Question;
+import codecool.Rule.question.SingleValue;
+import codecool.Rule.question.Value;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

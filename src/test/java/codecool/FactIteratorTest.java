@@ -1,8 +1,7 @@
 package codecool;
 
-import org.junit.jupiter.api.function.Executable;
-
-import javax.swing.text.html.HTMLDocument;
+import codecool.Fact.Fact;
+import codecool.Fact.FactRepository;
 
 import java.util.HashMap;
 import java.util.Iterator;

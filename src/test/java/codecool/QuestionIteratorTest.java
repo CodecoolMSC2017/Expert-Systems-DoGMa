@@ -1,5 +1,8 @@
 package codecool;
 
+import codecool.Rule.question.Answer;
+import codecool.Rule.question.Question;
+import codecool.Rule.RuleRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

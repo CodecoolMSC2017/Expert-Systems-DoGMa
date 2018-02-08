@@ -1,4 +1,4 @@
-package codecool;
+package codecool.Rule.question;
 
 public class Question {
     private String id;

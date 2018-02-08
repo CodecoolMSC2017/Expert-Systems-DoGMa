@@ -1,4 +1,4 @@
-package codecool;
+package codecool.DataService;
 
 import org.w3c.dom.Document;
 

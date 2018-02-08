@@ -1,4 +1,4 @@
-package codecool;
+package codecool.Fact;
 
 import java.util.Iterator;
 import java.util.LinkedList;

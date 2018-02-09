@@ -5,6 +5,8 @@ import codecool.DataService.RuleParser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ESProviderTest {
@@ -12,7 +14,7 @@ class ESProviderTest {
     ESProvider e;
     RuleParser r;
     @BeforeEach
-    void setUp() {
+    void setUp() throws IOException, InterruptedException {
         f = new FactParser("src/com/codecool/data/test.xml");
         r = new RuleParser("src/com/codecool/data/questions.xml");
         e = new ESProvider(f, r);
@@ -26,7 +28,7 @@ class ESProviderTest {
     }
 
     @Test
-    void TestEvaluate() {
+    void TestEvaluate() throws IOException, InterruptedException {
         assertEquals("Test\n",e.evaluate());
         assertFalse("Dako"==e.evaluate());
     }

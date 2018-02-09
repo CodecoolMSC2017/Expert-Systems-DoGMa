@@ -5,6 +5,7 @@ import codecool.DataService.FactParser;
 import codecool.Rule.question.Question;
 import codecool.DataService.RuleParser;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -35,7 +36,7 @@ public class ESProvider {
     }
 
     // ESProvider method(s)
-    public void collectAnswers() {
+    public void collectAnswers() throws IOException {
         factParser.getFactRepository().printFactCollectionNumber();
         Iterator<Question> questions = ruleParser.getRuleRepository().getIterator();
 
@@ -60,7 +61,7 @@ public class ESProvider {
 
 
 
-    public String evaluate() {
+    public String evaluate() throws IOException {
         Iterator<Fact> facts = factParser.getFactRepository().getIterator();
         String chosenSeries = "";
 
@@ -78,6 +79,14 @@ public class ESProvider {
             } catch (Exception e) {
             }
         }
+        urlOpener(chosenSeries);
         return chosenSeries.equals("") ? "Series not found!" : chosenSeries;
     }
+
+    public void urlOpener(String url) throws IOException {
+        Runtime rt = Runtime.getRuntime();
+        rt.exec("open " + url);
+
+    }
+
 }
